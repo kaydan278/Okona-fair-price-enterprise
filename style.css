@@ -1404,6 +1404,27 @@ footer {
     transform: none;
 }
 
+/* =========================================================
+   20B. SECTION SPACING & ANCHOR FIX
+   ========================================================= */
+
+section {
+    padding: 80px 5%;
+    scroll-margin-top: 95px;
+}
+
+#home {
+    padding: 0;
+    scroll-margin-top: 0;
+}
+
+#products {
+    padding-top: 90px;
+}
+
+.product-category {
+    scroll-margin-top: 100px;
+}
 
 /* =========================================================
    21. TABLET
