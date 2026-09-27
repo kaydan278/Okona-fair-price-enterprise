@@ -1756,6 +1756,31 @@ section {
 
 }
 
+/* =========================================================
+   WHATSAPP BUTTON HOVER FIX
+   ========================================================= */
+
+.btn-whatsapp,
+.whatsapp-btn,
+a[href*="wa.me"] {
+    background: #f4b942 !important;
+    color: #111 !important;
+    border-color: #f4b942 !important;
+}
+
+.btn-whatsapp:hover,
+.whatsapp-btn:hover,
+a[href*="wa.me"]:hover,
+.btn-whatsapp:focus,
+.whatsapp-btn:focus,
+a[href*="wa.me"]:focus,
+.btn-whatsapp:active,
+.whatsapp-btn:active,
+a[href*="wa.me"]:active {
+    background: #f4b942 !important;
+    color: #111 !important;
+    border-color: #f4b942 !important;
+}
 
 /* =========================================================
    END OF OKONA STYLE.CSS
