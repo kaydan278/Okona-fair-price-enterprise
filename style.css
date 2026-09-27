@@ -1,11 +1,14 @@
-/* ==============================
-   OKONA HOME DECOR
-   PROFESSIONAL WEBSITE STYLE
-   ============================== */
+/* =========================================================
+   OKONA HOME DECOR — CLEAN MASTER STYLE.CSS
+   ========================================================= */
 
-/* ---------- GENERAL ---------- */
+/* =========================
+   RESET
+   ========================= */
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -14,67 +17,80 @@ html {
 }
 
 body {
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #333;
-    background: white;
+    background: #f8f7f4;
+    color: #222;
     line-height: 1.6;
+    overflow-x: hidden;
 }
+
+
+/* =========================
+   GENERAL
+   ========================= */
 
 img {
     max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
 }
 
 section {
-    padding: 80px 20px;
+    padding: 80px 6%;
+    position: relative;
 }
 
-section h2 {
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 20px;
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+}
+
+button {
+    font-family: inherit;
 }
 
 
-/* ---------- HEADER ---------- */
+/* =========================
+   HEADER
+   ========================= */
 
 header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
+    width: 100%;
+    min-height: 82px;
+    background: #111;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    padding: 10px 40px;
-    background: white;
-
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-}
-
-header h1 {
-    margin: 0;
-    line-height: 0;
+    padding: 10px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
 }
 
 .logo {
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: 70px;
     object-fit: contain;
+    border-radius: 6px;
 }
 
 nav {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
 }
 
 nav a {
-    text-decoration: none;
-    color: #333;
+    color: #fff;
+    font-size: 15px;
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: 0.3s ease;
 }
 
 nav a:hover {
@@ -82,1386 +98,21 @@ nav a:hover {
 }
 
 
-/* ---------- HOME / HERO ---------- */
-
-#home {
-    min-height: 650px;
-
-    padding: 0 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.48),
-            rgba(0, 0, 0, 0.48)
-        ),
-        url("images/hero.jpeg") center/cover no-repeat;
-
-    color: white;
-}
-
-.hero-content {
-    max-width: 800px;
-}
-
-.hero-small {
-    font-size: 15px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-}
-
-#home h2 {
-    font-size: 60px;
-    line-height: 1.1;
-    margin-bottom: 20px;
-}
-
-.hero-text {
-    max-width: 650px;
-    margin: 0 auto 35px;
-
-    font-size: 21px;
-    line-height: 1.6;
-}
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.shop-button,
-.hero-whatsapp,
-.about-button,
-.cta-button,
-.contact-button,
-.order-button,
-.view-products-button {
-    display: inline-block;
-
-    text-decoration: none;
-    font-weight: bold;
-
-    transition: all 0.3s ease;
-}
-
-.shop-button {
-    background: #d4af37;
-    color: white;
-
-    padding: 15px 35px;
-    font-size: 18px;
-    border-radius: 6px;
-}
-
-.hero-whatsapp {
-    background: #25D366;
-    color: white;
-
-    padding: 15px 35px;
-    font-size: 18px;
-    border-radius: 6px;
-}
-
-.hero-whatsapp:hover,
-.shop-button:hover,
-.about-button:hover,
-.cta-button:hover,
-.contact-button:hover,
-.order-button:hover,
-.view-products-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.trust-text {
-    margin-top: 30px;
-    font-size: 15px;
-    letter-spacing: 1px;
-}
-
-
-/* ---------- WHAT WE OFFER ---------- */
-
-#services {
-    background: #f8f6f2;
-    text-align: center;
-}
-
-.services-small {
-    margin-bottom: 10px;
-
-    color: #b08a18;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 3px;
-}
-
-#services h2 {
-    max-width: 750px;
-    margin-left: auto;
-    margin-right: auto;
-
-    font-size: 42px;
-}
-
-.services-intro {
-    max-width: 700px;
-    margin: 0 auto 45px;
-
-    color: #666;
-    font-size: 18px;
-}
-
-.services-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.service-card {
-    background: white;
-    padding: 35px 25px;
-
-    border-radius: 14px;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
-}
-
-.service-card h3 {
-    font-size: 23px;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.service-card p {
-    margin: 0;
-    color: #666;
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-
-
-/* ---------- SHOP BY CATEGORY ---------- */
-
-#categories {
-    background: #f8f6f2;
-    text-align: center;
-}
-
-#categories h2 {
-    font-size: 42px;
-}
-
-.categories-intro {
-    max-width: 650px;
-    margin: 0 auto 45px;
-
-    color: #666;
-    font-size: 18px;
-}
-
-.category-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 25px;
-
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.category-card {
-    display: block;
-
-    background: white;
-    padding: 20px;
-
-    border-radius: 14px;
-
-    text-decoration: none;
-    color: #333;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
-
-    overflow: hidden;
-}
-
-.category-card img {
-    width: 100%;
-    height: 200px;
-
-    object-fit: cover;
-
-    border-radius: 10px;
-    margin-bottom: 18px;
-
-    display: block;
-}
-
-.category-card h3 {
-    font-size: 22px;
-    margin: 5px 0 10px;
-}
-
-.category-card p {
-    margin: 0;
-    color: #666;
-}
-
-.category-card:hover {
-    transform: translateY(-8px);
-
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-
-
-/* ---------- FEATURED PRODUCTS ---------- */
-
-#featured {
-    background: white;
-    text-align: center;
-}
-
-#featured h2 {
-    font-size: 42px;
-}
-
-.featured-intro {
-    max-width: 650px;
-    margin: 0 auto 45px;
-
-    color: #666;
-    font-size: 18px;
-}
-
-.featured-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 25px;
-
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.featured-card {
-    display: block;
-
-    background: #f8f6f2;
-
-    border-radius: 14px;
-    overflow: hidden;
-
-    text-decoration: none;
-    color: #333;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
-}
-
-.featured-card img {
-    width: 100%;
-    height: 230px;
-
-    object-fit: cover;
-    display: block;
-}
-
-.featured-card h3 {
-    font-size: 21px;
-    margin: 20px 15px 10px;
-}
-
-.featured-card p {
-    color: #666;
-    margin: 0 15px 25px;
-}
-
-.featured-card:hover {
-    transform: translateY(-8px);
-
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-
-.view-products-button {
-    margin-top: 45px;
-
-    padding: 14px 32px;
-
-    background: #d4af37;
-    color: white;
-
-    border-radius: 6px;
-    font-size: 17px;
-}
-
-
-/* ---------- WHY CHOOSE OKONA ---------- */
-
-#why-us {
-    background: white;
-    text-align: center;
-}
-
-#why-us h2 {
-    font-size: 36px;
-}
-
-.why-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
-
-    max-width: 1100px;
-    margin: 40px auto 0;
-}
-
-.why-box {
-    background: #f8f6f2;
-
-    padding: 30px 25px;
-
-    border-radius: 12px;
-
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
-}
-
-.why-box h3 {
-    font-size: 23px;
-    margin-top: 0;
-}
-
-.why-box p {
-    margin: 0;
-}
-
-.why-box:hover {
-    transform: translateY(-8px);
-
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-
-/* ---------- CTA ---------- */
-
-#cta {
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.60),
-            rgba(0, 0, 0, 0.60)
-        ),
-        url("images/hero.jpeg") center/cover no-repeat;
-
-    color: white;
-    text-align: center;
-}
-
-#cta h2 {
-    font-size: 42px;
-}
-
-#cta p {
-    max-width: 650px;
-    margin: 0 auto 30px;
-
-    font-size: 18px;
-}
-
-.cta-button {
-    padding: 15px 35px;
-
-    background: #25D366;
-    color: white;
-
-    border-radius: 6px;
-}
-
-
-/* ---------- ABOUT ---------- */
-
-#about {
-    background: white;
-}
-
-.about-content {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.about-text {
-    max-width: 800px;
-    margin: 0 auto;
-
-    text-align: center;
-}
-
-.about-small {
-    color: #b08a18;
-
-    font-size: 14px;
-    font-weight: bold;
-
-    letter-spacing: 3px;
-}
-
-.about-text h2 {
-    font-size: 42px;
-    line-height: 1.2;
-}
-
-.about-text p:not(.about-small) {
-    color: #666;
-    font-size: 18px;
-}
-
-.about-button {
-    margin-top: 20px;
-
-    padding: 14px 30px;
-
-    background: #d4af37;
-    color: white;
-
-    border-radius: 6px;
-}
-
-
-/* ---------- PRODUCTS ---------- */
-
-#products {
-    background: #f8f6f2;
-}
-
-#products > h2 {
-    font-size: 42px;
-}
-
-.products-intro {
-    max-width: 700px;
-
-    margin: 0 auto 45px;
-
-    text-align: center;
-
-    color: #666;
-    font-size: 18px;
-}
-
-.product-category {
-    background: #ffffff;
-    padding: 25px;
-    margin: 30px auto;
-    border-radius: 15px;
-    max-width: 1100px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
-    border: 1px solid #eeeeee;
-}
-
-.product-category h3 {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.category-description {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #666666;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-}
-
-.order-button {
-    display: block;
-    width: fit-content;
-    margin: 25px auto 5px;
-    padding: 12px 22px;
-    text-decoration: none;
-    border-radius: 8px;
-    background-color: #D4AF37 !important;
-    color: white !important;
-    font-weight: bold;
-    text-align: center;
-}
-
-.testimonial-card p {
-    color: #555;
-
-    font-size: 17px;
-    font-style: italic;
-
-    margin-top: 0;
-}
-
-.testimonial-card h3 {
-    font-size: 16px;
-    margin-bottom: 0;
-}
-
-
-/* ---------- CONTACT ---------- */
-
-#contact {
-    background: white;
-    text-align: center;
-}
-
-#contact h2 {
-    font-size: 42px;
-}
-
-#contact p {
-    font-size: 18px;
-}
-
-.contact-button {
-    margin-top: 15px;
-
-    padding: 14px 30px;
-
-    background: #25D366;
-    color: white;
-
-    border-radius: 6px;
-}
-
-
-/* ---------- FOOTER ---------- */
-
-footer {
-    background: #222;
-    color: white;
-
-    padding: 60px 20px 20px;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 40px;
-
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.footer-brand,
-.footer-links,
-.footer-contact {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer-logo {
-    width: 90px;
-    height: 90px;
-
-    object-fit: contain;
-
-    margin-bottom: 15px;
-}
-
-.footer-brand p {
-    color: #ccc;
-}
-
-.footer-links h3,
-.footer-contact h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.footer-links a,
-.footer-contact a {
-    color: #ccc;
-    text-decoration: none;
-
-    margin-bottom: 8px;
-
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover,
-.footer-contact a:hover {
-    color: #d4af37;
-}
-
-.footer-contact p {
-    color: #ccc;
-    margin: 5px 0;
-}
-
-.footer-bottom {
-    max-width: 1100px;
-
-    margin: 40px auto 0;
-    padding-top: 20px;
-
-    border-top: 1px solid #444;
-
-    text-align: center;
-
-    color: #aaa;
-}
-
-
-/* ---------- BACK TO TOP ---------- */
-
-#topButton {
-    position: fixed;
-
-    bottom: 25px;
-    right: 25px;
-
-    background: #d4af37;
-    color: white;
-
-    border: none;
-
-    padding: 12px 18px;
-
-    border-radius: 50px;
-
-    cursor: pointer;
-
-    font-weight: bold;
-
-    z-index: 1000;
-
-    transition: all 0.3s ease;
-}
-
-#topButton:hover {
-    transform: translateY(-3px);
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-
-/* ==============================
-   TABLET
-   ============================== */
-
-@media (max-width: 900px) {
-
-    .category-container,
-    .featured-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .services-container,
-    .why-container,
-    .testimonials-container {
-        grid-template-columns: 1fr;
-        max-width: 600px;
-    }
-
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    #home h2 {
-        font-size: 50px;
-    }
-}
-
-
-/* ==============================
-   MOBILE
-   ============================== */
-
-@media (max-width: 600px) {
-
-    section {
-        padding: 60px 15px;
-    }
-
-    header {
-    padding: 10px 5px;
-
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .logo {
-        width: 75px;
-        height: 75px;
-    }
-
-    nav {
-    gap: 6px;
-    flex-wrap: nowrap;
-    justify-content: center;
-    width: 100%;
-}
-
-nav a {
-    font-size: 13px;
-    white-space: nowrap;
-}
-
-    nav a {
-        display: inline-block;
-
-        margin: 3px 5px;
-
-        font-size: 14px;
-    }
-
-    #home {
-        min-height: 600px;
-    }
-
-    #home h2 {
-        font-size: 40px;
-    }
-
-    .hero-text {
-        font-size: 17px;
-    }
-
-    .hero-small {
-        font-size: 12px;
-        letter-spacing: 2px;
-    }
-
-    #services h2,
-    #categories h2,
-    #featured h2,
-    #testimonials h2,
-    #contact h2,
-    #cta h2,
-    .about-text h2,
-    #products > h2 {
-        font-size: 32px;
-    }
-
-    .category-container,
-    .featured-container,
-    .gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .category-card img {
-        height: 220px;
-    }
-
-    .gallery img {
-        height: 260px;
-    }
-
-    .product-category {
-        padding: 30px 15px;
-    }
-
-    .product-category h3 {
-        font-size: 26px;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-
-        text-align: center;
-    }
-
-    .footer-brand,
-    .footer-links,
-    .footer-contact {
-        align-items: center;
-    }
-
-    .footer-logo {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #topButton {
-        bottom: 15px;
-        right: 15px;
-    }
-}
-
-
-.category-description {
-    max-width: 700px;
-    margin: -10px auto 30px;
-    color: #666;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-@media (max-width: 600px) {
-
-    header {
-        padding: 10px 4px;
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .logo {
-        width: 75px;
-        height: 75px;
-    }
-
-    nav {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        gap: 0;
-        white-space: nowrap;
-        overflow: visible;
-    }
-
-    nav a {
-        display: block;
-        font-size: 10px;
-        white-space: nowrap;
-        padding: 0 3px;
-        margin: 0;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    nav {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        width: 100% !important;
-        justify-content: space-around !important;
-        align-items: center !important;
-        gap: 0 !important;
-        white-space: nowrap !important;
-    }
-
-    nav a {
-        display: block !important;
-        flex-shrink: 1 !important;
-        font-size: 9px !important;
-        white-space: nowrap !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-}
-
-
-@media (max-width: 600px) {
-    nav {
-        width: 100% !important;
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        justify-content: space-between !important;
-        gap: 0 !important;
-    }
-
-    nav a {
-        font-size: 11px !important;
-        white-space: nowrap !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-}
-
-
-/* ---------- MOBILE NAVIGATION ---------- */
-
-@media (max-width: 600px) {
-
-    header nav {
-        width: 100% !important;
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        justify-content: flex-start !important;
-        gap: 22px !important;
-        padding: 5px 10px !important;
-        white-space: nowrap !important;
-    }
-
-    header nav a {
-        flex: 0 0 auto !important;
-        font-size: 14px !important;
-        white-space: nowrap !important;
-    }
-
-}
-
-
-/* ---------- TESTIMONIALS ---------- */
-
-#testimonials {
-    background: #f8f6f2;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-#testimonials h2 {
-    text-align: center;
-    font-size: 42px;
-    margin: 0 auto 40px;
-}
-
-.testimonials-container {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.testimonial-card {
-    width: 100%;
-    background: white;
-
-    padding: 30px 25px;
-
-    border-radius: 14px;
-    border: 1px solid #eeeeee;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-
-    text-align: center;
-}
-
-.testimonial-card p {
-    color: #555;
-    font-size: 17px;
-    font-style: italic;
-
-    margin: 0 0 20px;
-
-    line-height: 1.6;
-}
-
-.testimonial-card h3 {
-    font-size: 16px;
-    margin: 0;
-    color: #333;
-}
-
-
-/* ---------- TESTIMONIALS ON SMALL SCREENS ---------- */
-
-@media (max-width: 900px) {
-
-    .testimonials-container {
-        grid-template-columns: 1fr;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    #testimonials {
-        padding: 60px 15px;
-    }
-
-    #testimonials h2 {
-        font-size: 32px;
-    }
-
-    .testimonials-container {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-
-}
-
-/* ---------- CONTACT SECTION ---------- */
-
-#contact {
-    background: #f8f6f2;
-    text-align: center;
-}
-
-#contact h2 {
-    font-size: 42px;
-    margin-bottom: 15px;
-}
-
-.contact-small {
-    color: #b08a18;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
-}
-
-.contact-intro {
-    max-width: 650px;
-    margin: 0 auto 40px;
-    color: #666;
-    font-size: 18px;
-}
-
-.contact-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    max-width: 900px;
-    margin: 0 auto 35px;
-}
-
-.contact-card {
-    background: white;
-    padding: 30px 20px;
-    border-radius: 14px;
-    border: 1px solid #eeeeee;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-}
-
-.contact-card h3 {
-    font-size: 21px;
-    margin: 0 0 10px;
-}
-
-.contact-card p {
-    color: #666;
-    font-size: 17px;
-    margin: 0;
-}
-
-.contact-button {
-    display: inline-block;
-    margin-top: 5px;
-    padding: 15px 30px;
-    background: #25D366;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.contact-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-
-/* ---------- CONTACT MOBILE ---------- */
-
-@media (max-width: 900px) {
-    .contact-container {
-        grid-template-columns: 1fr;
-        max-width: 600px;
-    }
-}
-
-@media (max-width: 600px) {
-    #contact h2 {
-        font-size: 32px;
-    }
-
-    .contact-intro {
-        font-size: 16px;
-    }
-
-    .contact-card {
-        padding: 25px 20px;
-    }
-}
-
-/* ---------- FOOTER IMPROVEMENT ---------- */
-
-footer {
-    background: #222;
-    color: white;
-    padding: 70px 20px 20px;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.footer-brand,
-.footer-links,
-.footer-contact {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer-brand {
-    align-items: flex-start;
-}
-
-.footer-links,
-.footer-contact {
-    align-items: flex-start;
-}
-
-.footer-logo {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    margin-bottom: 15px;
-}
-
-.footer-brand p {
-    color: #ccc;
-    margin: 0;
-}
-
-.footer-links h3,
-.footer-contact h3 {
-    color: white;
-    margin-top: 0;
-    margin-bottom: 18px;
-    font-size: 20px;
-}
-
-.footer-links a,
-.footer-contact a {
-    color: #ccc;
-    text-decoration: none;
-    margin-bottom: 10px;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover,
-.footer-contact a:hover {
-    color: #d4af37;
-}
-
-.footer-contact p {
-    color: #ccc;
-    margin: 5px 0;
-}
-
-.footer-contact a {
-    margin-top: 8px;
-    color: #d4af37;
-    font-weight: bold;
-}
-
-.footer-bottom {
-    max-width: 1100px;
-    margin: 50px auto 0;
-    padding-top: 20px;
-    border-top: 1px solid #444;
-    text-align: center;
-    color: #aaa;
-}
-
-.footer-bottom p {
-    margin: 0;
-}
-
-
-/* ---------- FOOTER MOBILE ---------- */
-
-@media (max-width: 900px) {
-    .footer-content {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-    footer {
-        padding: 50px 20px 20px;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 35px;
-        text-align: center;
-    }
-
-    .footer-brand,
-    .footer-links,
-    .footer-contact {
-        align-items: center;
-    }
-
-    .footer-logo {
-        width: 90px;
-        height: 90px;
-    }
-}
-
-/* ============================= */
-/* OKONA 3D EFFECTS */
-/* ============================= */
-
-.category-container,
-.featured-container,
-.services-container,
-.why-container,
-.testimonials-container {
-    perspective: 1000px;
-}
-
-/* 3D cards */
-.category-card,
-.featured-card,
-.service-card,
-.why-box,
-.testimonial-card,
-.product-category {
-    transform-style: preserve-3d;
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-}
-
-.category-card:hover,
-.featured-card:hover,
-.service-card:hover,
-.why-box:hover,
-.testimonial-card:hover,
-.product-category:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 18px 35px rgba(0,0,0,0.20);
-}
-
-/* Product and category images */
-.category-card img,
-.featured-card img,
-.gallery img {
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.category-card:hover img,
-.featured-card:hover img {
-    transform: translateZ(15px) scale(1.04);
-}
-
-.gallery img:hover {
-    transform: translateY(-7px) scale(1.03);
-    box-shadow: 0 14px 25px rgba(0,0,0,0.20);
-}
-
-/* 3D buttons */
-.shop-button,
-.hero-whatsapp,
-.cta-button,
-.order-button,
-.about-button,
-.contact-button,
-.view-products-button {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 5px 0 rgba(0,0,0,0.18);
-}
-
-.shop-button:hover,
-.hero-whatsapp:hover,
-.cta-button:hover,
-.order-button:hover,
-.about-button:hover,
-.contact-button:hover,
-.view-products-button:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 9px 0 rgba(0,0,0,0.18);
-}
-
-.shop-button:active,
-.hero-whatsapp:active,
-.cta-button:active,
-.order-button:active,
-.about-button:active,
-.contact-button:active,
-.view-products-button:active {
-    transform: translateY(2px);
-    box-shadow: 0 3px 0 rgba(0,0,0,0.18);
-}
-
-/* Logo depth */
-.logo,
-.footer-logo {
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.logo:hover,
-.footer-logo:hover {
-    transform: translateY(-3px) scale(1.04);
-    filter: drop-shadow(0 8px 8px rgba(0,0,0,0.18));
-}
-
-/* Mobile-friendly 3D */
-@media (max-width: 600px) {
-    .category-card:hover,
-    .featured-card:hover,
-    .service-card:hover,
-    .why-box:hover,
-    .testimonial-card:hover,
-    .product-category:hover {
-        transform: translateY(-4px);
-    }
-
-    .gallery img:hover {
-        transform: scale(1.02);
-    }
-}
-
-/* ================================= */
-/* OKONA VIDEO 3D HERO BACKGROUND */
-/* ================================= */
+/* =========================
+   VIDEO HERO
+   ========================= */
 
 .video-hero {
+    min-height: 88vh;
+    padding: 0;
     position: relative;
-    min-height: 600px;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    perspective: 1000px;
-    isolation: isolate;
+    background: #111;
 }
 
-/* Background video */
 .hero-video {
     position: absolute;
     top: 50%;
@@ -1469,742 +120,889 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: translate(-50%, -50%) scale(1.08);
-    z-index: -3;
-    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 0;
 }
 
-/* Dark overlay so text remains clear */
 .hero-overlay {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.42);
-    z-index: -2;
+    z-index: 1;
 }
 
-/* Hero content sits above the video */
-.video-hero .hero-content {
+.hero-content {
     position: relative;
     z-index: 2;
-    max-width: 850px;
-    padding: 60px 25px;
     text-align: center;
-    transform-style: preserve-3d;
-    animation: okonaHeroIn 1s ease;
+    color: #fff;
+    max-width: 900px;
+    padding: 30px;
+    animation: heroFade 1.2s ease;
 }
 
-/* 3D text depth */
-.video-hero .hero-content h2 {
-    transform: translateZ(35px);
-    text-shadow:
-        0 3px 5px rgba(0,0,0,0.45),
-        0 10px 20px rgba(0,0,0,0.25);
+.hero-content h1 {
+    font-size: clamp(38px, 7vw, 78px);
+    margin-bottom: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
 }
 
-.video-hero .hero-content p {
-    transform: translateZ(20px);
+.hero-content h2 {
+    color: #d4af37;
+    font-size: clamp(20px, 3vw, 34px);
+    margin-bottom: 18px;
 }
 
-/* 3D hero buttons */
-.video-hero .hero-buttons {
-    transform: translateZ(30px);
+.hero-content p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 28px;
 }
 
-/* Gentle 3D movement */
-@keyframes okonaHeroIn {
+@keyframes heroFade {
     from {
         opacity: 0;
-        transform: translateY(25px) translateZ(0);
+        transform: translateY(30px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0) translateZ(0);
+        transform: translateY(0);
     }
 }
 
-/* Slight depth movement for video */
-@keyframes okonaVideoZoom {
-    0% {
-        transform: translate(-50%, -50%) scale(1.08);
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.btn,
+button.btn {
+    display: inline-block;
+    background: #d4af37;
+    color: #111;
+    padding: 13px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover,
+button.btn:hover {
+    background: #fff;
+    color: #111;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   SECTION HEADINGS
+   ========================= */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: clamp(30px, 5vw, 48px);
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    max-width: 750px;
+    margin: auto;
+    color: #666;
+}
+
+
+/* =========================
+   WHY US
+   ========================= */
+
+#why-us {
+    background: #fff;
+}
+
+.why-us-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.why-us-card {
+    background: #f8f7f4;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 15px;
+    transition: 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.why-us-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.why-us-card h3 {
+    margin: 12px 0;
+    color: #111;
+}
+
+.why-us-card p {
+    color: #666;
+}
+
+
+/* =========================
+   SERVICES
+   ========================= */
+
+#services {
+    background: #f3f1eb;
+}
+
+.services-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 35px 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+    color: #111;
+}
+
+.service-card p {
+    color: #666;
+}
+
+
+/* =========================
+   CTA
+   ========================= */
+
+#cta {
+    background: #111;
+    color: #fff;
+    text-align: center;
+}
+
+#cta h2 {
+    font-size: clamp(28px, 5vw, 45px);
+    margin-bottom: 15px;
+}
+
+#cta p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    color: #ddd;
+}
+
+
+/* =========================
+   ABOUT
+   ========================= */
+
+#about {
+    background: #fff;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-container h2 {
+    font-size: clamp(30px, 5vw, 46px);
+    margin-bottom: 20px;
+}
+
+.about-container p {
+    max-width: 850px;
+    margin: 0 auto 15px;
+    color: #555;
+}
+
+
+/* =========================
+   FEATURED
+   ========================= */
+
+#featured {
+    background: #f3f1eb;
+}
+
+.featured-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.featured-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.featured-card:hover {
+    transform: translateY(-8px);
+}
+
+.featured-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.featured-card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.featured-card-content h3 {
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   PRODUCTS
+   ========================= */
+
+#products {
+    background: #fff;
+}
+
+#categories {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.category-description {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 25px;
+    color: #666;
+}
+
+
+/* =========================
+   PRODUCT CATEGORY
+   ========================= */
+
+.product-category {
+    max-width: 1250px;
+    margin: 0 auto 80px;
+}
+
+.product-category h3 {
+    text-align: center;
+    font-size: clamp(27px, 4vw, 40px);
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.product-category h3::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #d4af37;
+    margin: 12px auto 20px;
+}
+
+
+/* =========================
+   PRODUCT GALLERY
+   ========================= */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #eee;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        filter 0.35s ease;
+}
+
+.gallery img:hover {
+    transform: translateY(-7px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
+    filter: brightness(1.03);
+}
+
+
+/* =========================
+   PRODUCT ORDER BUTTONS
+   ========================= */
+
+.order-button {
+    display: block;
+    width: fit-content;
+    margin: 25px auto 0;
+    background: #d4af37;
+    color: #111;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.order-button:hover {
+    background: #111;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   TESTIMONIALS
+   ========================= */
+
+#testimonials {
+    background: #f3f1eb;
+}
+
+.testimonials-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.testimonial-card {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    transition: 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-7px);
+}
+
+.testimonial-card p {
+    color: #555;
+    font-style: italic;
+    margin-bottom: 18px;
+}
+
+.testimonial-card h4 {
+    color: #111;
+}
+
+.testimonial-stars {
+    color: #d4af37;
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   CONTACT
+   ========================= */
+
+#contact {
+    background: #111;
+    color: #fff;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.contact-container h2 {
+    font-size: clamp(30px, 5vw, 46px);
+    margin-bottom: 20px;
+}
+
+.contact-container p {
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+.contact-container a {
+    color: #d4af37;
+    font-weight: 700;
+}
+
+.contact-container a:hover {
+    color: #fff;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    background: #080808;
+    color: #ccc;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.footer-links a {
+    color: #d4af37;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+
+/* =========================
+   FLOATING WHATSAPP
+   ========================= */
+
+.floating-whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #25d366;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    z-index: 9999;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   TOP BUTTON
+   ========================= */
+
+#topButton {
+    position: fixed;
+    right: 22px;
+    bottom: 92px;
+    border: none;
+    background: #d4af37;
+    color: #111;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 9998;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.18);
+    transition: 0.3s ease;
+}
+
+#topButton:hover {
+    background: #111;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   FULL SCREEN IMAGE VIEWER
+   ========================= */
+
+.image-viewer {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.image-viewer.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+#viewerImage {
+    max-width: 88%;
+    max-height: 82vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.viewer-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-size: 45px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.viewer-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(212, 175, 55, 0.9);
+    color: #111;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.viewer-prev {
+    left: 25px;
+}
+
+.viewer-next {
+    right: 25px;
+}
+
+.image-counter {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 16px;
+}
+
+
+/* =========================
+   SCROLL REVEAL
+   ========================= */
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   SIMPLE 3D EFFECTS
+   ========================= */
+
+.product-category,
+.featured-card,
+.service-card,
+.testimonial-card,
+.why-us-card {
+    transform-style: preserve-3d;
+}
+
+.gallery img {
+    transform-origin: center;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+
+    section {
+        padding: 65px 5%;
     }
 
-    50% {
-        transform: translate(-50%, -50%) scale(1.12);
+    nav {
+        gap: 15px;
     }
 
-    100% {
-        transform: translate(-50%, -50%) scale(1.08);
+    nav a {
+        font-size: 14px;
+    }
+
+    .why-us-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gallery img {
+        height: 230px;
     }
 }
 
-.hero-video {
-    animation: okonaVideoZoom 18s ease-in-out infinite;
-}
 
-/* ================================= */
-/* MOBILE VIDEO HERO */
-/* ================================= */
+/* =========================
+   MOBILE
+   ========================= */
 
 @media (max-width: 600px) {
 
+    header {
+        min-height: auto;
+        padding: 8px 4%;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 58px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding-bottom: 5px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    section {
+        padding: 55px 5%;
+    }
+
     .video-hero {
-        min-height: 560px;
+        min-height: 78vh;
     }
 
     .hero-video {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transform: translate(-50%, -50%) scale(1.12);
-    }
-
-    .video-hero .hero-content {
-        padding: 50px 18px;
-    }
-
-    .video-hero .hero-content h2 {
-        transform: translateZ(15px);
-    }
-
-    .video-hero .hero-content p {
-        transform: translateZ(10px);
-    }
-
-    .video-hero .hero-buttons {
-        transform: translateZ(15px);
     }
 
     .hero-overlay {
         background: rgba(0, 0, 0, 0.48);
     }
-}
 
-/* ================================= */
-/* OKONA FLOATING WHATSAPP BUTTON */
-/* ================================= */
-
-.floating-whatsapp {
-    position: fixed;
-    right: 22px;
-    bottom: 85px;
-    width: 58px;
-    height: 58px;
-    background: #25D366;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 28px;
-    font-weight: bold;
-    z-index: 9999;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    animation: whatsappPulse 2s infinite;
-}
-
-.floating-whatsapp:hover {
-    transform: translateY(-5px) scale(1.08);
-    box-shadow: 0 14px 28px rgba(0,0,0,0.30);
-}
-
-.floating-whatsapp:active {
-    transform: scale(0.94);
-}
-
-@keyframes whatsappPulse {
-    0% {
-        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    .hero-content {
+        padding: 20px;
     }
 
-    50% {
-        box-shadow: 0 8px 20px rgba(37,211,102,0.55);
+    .hero-content h1 {
+        font-size: 38px;
     }
 
-    100% {
-        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    .hero-content h2 {
+        font-size: 21px;
     }
-}
 
-/* Mobile */
-@media (max-width: 600px) {
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .btn {
+        padding: 11px 22px;
+        font-size: 14px;
+    }
+
+    .why-us-grid,
+    .services-grid,
+    .featured-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .gallery img {
+        height: 190px;
+        border-radius: 10px;
+    }
+
+    .product-category {
+        margin-bottom: 60px;
+    }
+
+    .product-category h3 {
+        font-size: 28px;
+    }
+
+    .category-description {
+        font-size: 14px;
+    }
+
+    .featured-card img {
+        height: 230px;
+    }
+
     .floating-whatsapp {
-        width: 54px;
-        height: 54px;
-        right: 16px;
-        bottom: 80px;
-        font-size: 25px;
-    }
-}
-
-/* FINAL POSITION FOR FLOATING BUTTONS */
-
-#topButton {
-    position: fixed !important;
-    right: 20px !important;
-    bottom: 20px !important;
-    z-index: 9998 !important;
-}
-
-.floating-whatsapp {
-    position: fixed !important;
-    right: 20px !important;
-    bottom: 90px !important;
-    z-index: 9999 !important;
-}
-
-/* FINAL POSITION FOR FLOATING BUTTONS */
-
-#topButton {
-    position: fixed !important;
-    right: 20px !important;
-    bottom: 20px !important;
-    z-index: 9998 !important;
-}
-
-.floating-whatsapp {
-    position: fixed !important;
-    right: 20px !important;
-    bottom: 90px !important;
-    z-index: 9999 !important;
-}
-/* =========================================
-   OKONA FULL SCREEN PRODUCT VIEWER
-========================================= */
-
-.image-viewer {
-    position: fixed !important;
-    inset: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    background: rgba(0, 0, 0, 0.94) !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    z-index: 999999 !important;
-
-    opacity: 0 !important;
-    visibility: hidden !important;
-
-    padding: 20px !important;
-    box-sizing: border-box !important;
-
-    transition: opacity 0.25s ease,
-                visibility 0.25s ease !important;
-}
-
-.image-viewer.active {
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
-
-/* PRODUCT IMAGE */
-
-.image-viewer #viewerImage {
-    display: block !important;
-
-    width: auto !important;
-    height: auto !important;
-
-    max-width: 90vw !important;
-    max-height: 82vh !important;
-
-    object-fit: contain !important;
-
-    opacity: 1 !important;
-    visibility: visible !important;
-
-    transform: scale(1) !important;
-
-    border-radius: 10px !important;
-
-    box-shadow: 0 15px 45px rgba(0,0,0,0.5) !important;
-
-    z-index: 1000000 !important;
-}
-
-
-/* CLOSE BUTTON */
-
-.viewer-close {
-    position: absolute !important;
-
-    top: 18px !important;
-    right: 22px !important;
-
-    width: 48px !important;
-    height: 48px !important;
-
-    border: none !important;
-    border-radius: 50% !important;
-
-    background: rgba(255,255,255,0.18) !important;
-    color: white !important;
-
-    font-size: 34px !important;
-    line-height: 1 !important;
-
-    cursor: pointer !important;
-
-    z-index: 1000001 !important;
-}
-
-
-/* ARROWS */
-
-.viewer-arrow {
-    position: absolute !important;
-
-    top: 50% !important;
-
-    transform: translateY(-50%) !important;
-
-    width: 55px !important;
-    height: 55px !important;
-
-    border: none !important;
-    border-radius: 50% !important;
-
-    background: rgba(255,255,255,0.18) !important;
-
-    color: white !important;
-
-    font-size: 48px !important;
-    line-height: 40px !important;
-
-    cursor: pointer !important;
-
-    z-index: 1000001 !important;
-}
-
-.viewer-prev {
-    left: 20px !important;
-}
-
-.viewer-next {
-    right: 20px !important;
-}
-
-
-/* IMAGE COUNTER */
-
-.image-counter {
-    position: absolute !important;
-
-    bottom: 20px !important;
-    left: 50% !important;
-
-    transform: translateX(-50%) !important;
-
-    color: white !important;
-
-    font-size: 15px !important;
-
-    background: rgba(0,0,0,0.55) !important;
-
-    padding: 7px 14px !important;
-
-    border-radius: 20px !important;
-
-    z-index: 1000001 !important;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-
-    .image-viewer {
-        padding: 12px !important;
+        width: 52px;
+        height: 52px;
+        right: 15px;
+        bottom: 15px;
+        font-size: 24px;
     }
 
-    .image-viewer #viewerImage {
-        max-width: 94vw !important;
-        max-height: 78vh !important;
-    }
-
-    .viewer-arrow {
-        width: 45px !important;
-        height: 45px !important;
-        font-size: 38px !important;
-    }
-
-    .viewer-prev {
-        left: 8px !important;
-    }
-
-    .viewer-next {
-        right: 8px !important;
-    }
-
-    .viewer-close {
-        top: 12px !important;
-        right: 12px !important;
-    }
-}
-
-/* ================================= */
-/* MOBILE PRODUCT GALLERY */
-/* ================================= */
-
-@media (max-width: 600px) {
-
-    .image-viewer {
-        padding: 15px;
+    #topButton {
+        right: 15px;
+        bottom: 78px;
+        font-size: 12px;
+        padding: 8px 12px;
     }
 
     #viewerImage {
-        max-width: 94%;
-        max-height: 78vh;
-        border-radius: 8px;
+        max-width: 92%;
+        max-height: 75vh;
     }
 
     .viewer-close {
-        top: 12px;
+        top: 10px;
         right: 12px;
-        width: 44px;
-        height: 44px;
-        font-size: 30px;
+        font-size: 38px;
     }
 
     .viewer-arrow {
-        width: 48px;
-        height: 48px;
-        font-size: 40px;
+        width: 45px;
+        height: 45px;
+        font-size: 30px;
     }
 
     .viewer-prev {
-        left: 8px;
+        left: 10px;
     }
 
     .viewer-next {
-        right: 8px;
-    }
-
-    .image-counter {
-        bottom: 15px;
-        font-size: 14px;
+        right: 10px;
     }
 }
 
-/* ========================================= */
-/* OKONA — PREMIUM 3D SHOWROOM BACKGROUND    */
-/* ========================================= */
 
-html {
-    scroll-behavior: smooth;
-}
+/* =========================
+   VERY SMALL PHONES
+   ========================= */
 
-body {
-    background:
-        linear-gradient(
-            180deg,
-            #ffffff 0%,
-            #f8f7f4 28%,
-            #ffffff 55%,
-            #f7f6f2 78%,
-            #ffffff 100%
-        );
-    color: #222;
-    overflow-x: hidden;
-}
+@media (max-width: 380px) {
 
-/* ========================================= */
-/* SECTION DEPTH                             */
-/* ========================================= */
-
-section {
-    position: relative;
-    isolation: isolate;
-}
-
-/* Soft decorative background glow */
-section::before {
-    content: "";
-    position: absolute;
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    background: radial-gradient(
-        circle,
-        rgba(180, 160, 120, 0.10),
-        transparent 70%
-    );
-    top: 10%;
-    left: -140px;
-    z-index: -1;
-    pointer-events: none;
-}
-
-section::after {
-    content: "";
-    position: absolute;
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    background: radial-gradient(
-        circle,
-        rgba(180, 160, 120, 0.08),
-        transparent 70%
-    );
-    bottom: 5%;
-    right: -130px;
-    z-index: -1;
-    pointer-events: none;
-}
-
-/* ========================================= */
-/* SERVICES                                  */
-/* ========================================= */
-
-#services {
-    background:
-        linear-gradient(
-            135deg,
-            #ffffff,
-            #f5f3ee
-        );
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-
-/* ========================================= */
-/* CATEGORIES                                */
-/* ========================================= */
-
-#categories {
-    background:
-        linear-gradient(
-            180deg,
-            #f7f6f2,
-            #ffffff
-        );
-    padding-top: 90px;
-    padding-bottom: 90px;
-}
-
-/* ========================================= */
-/* FEATURED PRODUCTS                         */
-/* ========================================= */
-
-#featured {
-    background:
-        linear-gradient(
-            135deg,
-            #ffffff,
-            #f6f4ef,
-            #ffffff
-        );
-    padding-top: 90px;
-    padding-bottom: 90px;
-}
-
-/* ========================================= */
-/* WHY OKONA                                 */
-/* ========================================= */
-
-#why-us {
-    background:
-        linear-gradient(
-            180deg,
-            #f5f3ee,
-            #ffffff
-        );
-    padding-top: 90px;
-    padding-bottom: 90px;
-}
-
-/* ========================================= */
-/* ABOUT                                     */
-/* ========================================= */
-
-#about {
-    background:
-        linear-gradient(
-            135deg,
-            #ffffff,
-            #f7f6f2
-        );
-    padding-top: 90px;
-    padding-bottom: 90px;
-}
-
-/* ========================================= */
-/* PRODUCTS                                  */
-/* ========================================= */
-
-#products {
-    background:
-        linear-gradient(
-            180deg,
-            #f8f7f4,
-            #ffffff,
-            #f7f6f2
-        );
-    padding-top: 80px;
-    padding-bottom: 100px;
-}
-
-/* ========================================= */
-/* TESTIMONIALS                              */
-/* ========================================= */
-
-#testimonials {
-    background:
-        linear-gradient(
-            135deg,
-            #ffffff,
-            #f5f3ee
-        );
-    padding-top: 90px;
-    padding-bottom: 90px;
-}
-
-/* ========================================= */
-/* CONTACT                                   */
-/* ========================================= */
-
-#contact {
-    background:
-        linear-gradient(
-            180deg,
-            #f7f6f2,
-            #ffffff
-        );
-    padding-top: 90px;
-    padding-bottom: 90px;
-}
-
-/* ========================================= */
-/* 3D SECTION HEADINGS                      */
-/* ========================================= */
-
-section h2 {
-    position: relative;
-    text-shadow:
-        0 2px 3px rgba(0,0,0,0.08);
-    transform: translateZ(15px);
-}
-
-/* Small decorative line under headings */
-section h2::after {
-    content: "";
-    display: block;
-    width: 55px;
-    height: 3px;
-    margin: 14px auto 0;
-    border-radius: 10px;
-    background: currentColor;
-    opacity: 0.35;
-}
-
-/* ========================================= */
-/* 3D IMAGE DEPTH                            */
-/* ========================================= */
-
-.category-card img,
-.featured-card img,
-.gallery img {
-    transition:
-        transform 0.45s ease,
-        filter 0.45s ease;
-    will-change: transform;
-}
-
-.category-card:hover img,
-.featured-card:hover img,
-.gallery img:hover {
-    transform: scale(1.045) translateZ(12px);
-}
-
-/* ========================================= */
-/* PRODUCT CARDS                             */
-/* ========================================= */
-
-.category-card,
-.featured-card,
-.service-card,
-.why-box,
-.testimonial-card {
-    background: rgba(255,255,255,0.94);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-
-    border: 1px solid rgba(0,0,0,0.06);
-
-    box-shadow:
-        0 8px 20px rgba(0,0,0,0.08),
-        0 2px 5px rgba(0,0,0,0.04);
-}
-
-/* ========================================= */
-/* MOBILE                                    */
-/* ========================================= */
-
-@media (max-width: 600px) {
-
-    body {
-        background:
-            linear-gradient(
-                180deg,
-                #ffffff 0%,
-                #f8f7f4 30%,
-                #ffffff 60%,
-                #f7f6f2 100%
-            );
+    nav {
+        gap: 7px;
     }
 
-    section {
-        overflow: hidden;
+    nav a {
+        font-size: 10px;
     }
 
-    section::before {
-        width: 180px;
-        height: 180px;
-        left: -90px;
+    .hero-content h1 {
+        font-size: 32px;
     }
 
-    section::after {
-        width: 170px;
-        height: 170px;
-        right: -85px;
+    .hero-content h2 {
+        font-size: 18px;
     }
 
-    #services,
-    #categories,
-    #featured,
-    #why-us,
-    #about,
-    #products,
-    #testimonials,
-    #contact {
-        padding-top: 65px;
-        padding-bottom: 65px;
+    .gallery {
+        gap: 8px;
     }
 
-    section h2 {
-        text-shadow:
-            0 2px 4px rgba(0,0,0,0.10);
-    }
-
-    .category-card,
-    .featured-card,
-    .service-card,
-    .why-box,
-    .testimonial-card {
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
+    .gallery img {
+        height: 160px;
     }
 }
 
-/* ========================================= */
-/* REDUCE MOTION FOR ACCESSIBILITY            */
-/* ========================================= */
+
+/* =========================
+   REDUCED MOTION
+   ========================= */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -2218,713 +1016,5 @@ section h2::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
-    }
-}
-
-/* ========================================================= */
-/* OKONA HOME DECOR — COMPLETE 3D SHOWROOM EXPERIENCE       */
-/* ========================================================= */
-
-/* ========================================================= */
-/* 1. GLOBAL SMOOTHNESS                                     */
-/* ========================================================= */
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    overflow-x: hidden;
-    perspective: 1200px;
-}
-
-/* ========================================================= */
-/* 2. SECTION REVEAL                                        */
-/* ========================================================= */
-
-.reveal-on-scroll {
-    opacity: 0;
-    transform: translateY(45px) scale(0.98);
-    transition:
-        opacity 0.9s ease,
-        transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-
-.reveal-on-scroll.visible {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-}
-
-/* ========================================================= */
-/* 3. SECTION DEPTH                                         */
-/* ========================================================= */
-
-section {
-    transform-style: preserve-3d;
-}
-
-/* ========================================================= */
-/* 4. 3D HEADINGS                                           */
-/* ========================================================= */
-
-section h2 {
-    transform-style: preserve-3d;
-    transition:
-        transform 0.5s ease,
-        text-shadow 0.5s ease;
-}
-
-section h2:hover {
-    transform: translateY(-3px) translateZ(18px);
-    text-shadow:
-        0 4px 8px rgba(0,0,0,0.16);
-}
-
-/* ========================================================= */
-/* 5. CATEGORY SHOWROOM                                     */
-/* ========================================================= */
-
-.category-container {
-    perspective: 1200px;
-}
-
-.category-card {
-    transform-style: preserve-3d;
-    will-change: transform;
-    overflow: hidden;
-
-    transition:
-        transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1),
-        box-shadow 0.45s ease,
-        border-color 0.45s ease;
-}
-
-/* PC 3D movement */
-
-@media (min-width: 601px) {
-
-    .category-card:hover {
-        transform:
-            translateY(-14px)
-            rotateX(3deg)
-            rotateY(-3deg)
-            scale(1.025);
-
-        box-shadow:
-            0 25px 50px rgba(0,0,0,0.18);
-    }
-
-    .category-card:hover img {
-        transform:
-            translateZ(28px)
-            scale(1.07);
-    }
-}
-
-/* ========================================================= */
-/* 6. FEATURED PRODUCTS                                    */
-/* ========================================================= */
-
-.featured-container {
-    perspective: 1200px;
-}
-
-.featured-card {
-    transform-style: preserve-3d;
-    will-change: transform;
-
-    transition:
-        transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1),
-        box-shadow 0.45s ease;
-}
-
-@media (min-width: 601px) {
-
-    .featured-card:hover {
-        transform:
-            translateY(-13px)
-            rotateX(3deg)
-            rotateY(2deg)
-            scale(1.025);
-
-        box-shadow:
-            0 25px 50px rgba(0,0,0,0.18);
-    }
-
-    .featured-card:hover img {
-        transform:
-            translateZ(25px)
-            scale(1.07);
-    }
-}
-
-/* ========================================================= */
-/* 7. SERVICES 3D                                          */
-/* ========================================================= */
-
-.services-container {
-    perspective: 1200px;
-}
-
-.service-card {
-    transform-style: preserve-3d;
-
-    transition:
-        transform 0.45s ease,
-        box-shadow 0.45s ease;
-}
-
-@media (min-width: 601px) {
-
-    .service-card:hover {
-        transform:
-            translateY(-10px)
-            rotateX(2deg)
-            rotateY(-2deg);
-
-        box-shadow:
-            0 22px 40px rgba(0,0,0,0.15);
-    }
-}
-
-/* ========================================================= */
-/* 8. WHY OKONA 3D                                         */
-/* ========================================================= */
-
-.why-container {
-    perspective: 1200px;
-}
-
-.why-box {
-    transform-style: preserve-3d;
-
-    transition:
-        transform 0.45s ease,
-        box-shadow 0.45s ease;
-}
-
-@media (min-width: 601px) {
-
-    .why-box:hover {
-        transform:
-            translateY(-10px)
-            rotateX(2deg)
-            rotateY(2deg);
-
-        box-shadow:
-            0 22px 40px rgba(0,0,0,0.15);
-    }
-}
-
-/* ========================================================= */
-/* 9. TESTIMONIALS                                         */
-/* ========================================================= */
-
-.testimonial-card {
-    transform-style: preserve-3d;
-
-    transition:
-        transform 0.45s ease,
-        box-shadow 0.45s ease;
-}
-
-@media (min-width: 601px) {
-
-    .testimonial-card:hover {
-        transform:
-            translateY(-9px)
-            rotateX(2deg)
-            rotateY(-2deg);
-
-        box-shadow:
-            0 20px 38px rgba(0,0,0,0.15);
-    }
-}
-
-/* ========================================================= */
-/* 10. PRODUCT GALLERY                                     */
-/* ========================================================= */
-
-.gallery {
-    perspective: 1200px;
-}
-
-.gallery img {
-    transform-style: preserve-3d;
-    will-change: transform;
-
-    transition:
-        transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1),
-        box-shadow 0.45s ease,
-        filter 0.45s ease;
-}
-
-@media (min-width: 601px) {
-
-    .gallery img:hover {
-        transform:
-            translateY(-8px)
-            translateZ(20px)
-            scale(1.04)
-            rotateX(2deg);
-
-        box-shadow:
-            0 20px 35px rgba(0,0,0,0.20);
-
-        filter: brightness(1.04);
-    }
-}
-
-/* ========================================================= */
-/* 11. PRODUCT CATEGORY HEADINGS                            */
-/* ========================================================= */
-
-.product-category {
-    transform-style: preserve-3d;
-}
-
-.product-category h3 {
-    transition:
-        transform 0.5s ease,
-        text-shadow 0.5s ease;
-}
-
-.product-category h3:hover {
-    transform:
-        translateY(-3px)
-        translateZ(15px);
-
-    text-shadow:
-        0 5px 10px rgba(0,0,0,0.15);
-}
-
-/* ========================================================= */
-/* 12. BUTTON 3D EFFECT                                    */
-/* ========================================================= */
-
-.shop-button,
-.order-button,
-.hero-whatsapp,
-.cta-button,
-.contact-button,
-.about-button,
-.view-products-button {
-    position: relative;
-    transform-style: preserve-3d;
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-@media (min-width: 601px) {
-
-    .shop-button:hover,
-    .order-button:hover,
-    .hero-whatsapp:hover,
-    .cta-button:hover,
-    .contact-button:hover,
-    .about-button:hover,
-    .view-products-button:hover {
-
-        transform:
-            translateY(-4px)
-            translateZ(10px);
-
-        box-shadow:
-            0 10px 22px rgba(0,0,0,0.18);
-    }
-}
-
-/* ========================================================= */
-/* 13. MOBILE TOUCH DEPTH                                  */
-/* ========================================================= */
-
-@media (max-width: 600px) {
-
-    .category-card,
-    .featured-card,
-    .service-card,
-    .why-box,
-    .testimonial-card {
-
-        transition:
-            transform 0.22s ease,
-            box-shadow 0.22s ease;
-    }
-
-    .category-card:active,
-    .featured-card:active,
-    .service-card:active,
-    .why-box:active,
-    .testimonial-card:active {
-
-        transform:
-            translateY(-8px)
-            scale(0.985);
-
-        box-shadow:
-            0 18px 32px rgba(0,0,0,0.20);
-    }
-
-    .gallery img:active {
-        transform:
-            scale(0.97)
-            translateY(-4px);
-    }
-
-    .shop-button:active,
-    .order-button:active,
-    .hero-whatsapp:active,
-    .cta-button:active,
-    .contact-button:active,
-    .about-button:active,
-    .view-products-button:active {
-
-        transform:
-            translateY(3px)
-            scale(0.96);
-    }
-}
-
-/* ========================================================= */
-/* 14. HERO DEPTH                                          */
-/* ========================================================= */
-
-.video-hero {
-    transform-style: preserve-3d;
-}
-
-.video-hero .hero-content {
-    transform-style: preserve-3d;
-}
-
-.video-hero .hero-content h2 {
-    animation:
-        okonaTitleFloat 4s ease-in-out infinite;
-}
-
-.video-hero .hero-buttons {
-    animation:
-        okonaButtonsFloat 4.5s ease-in-out infinite;
-}
-
-@keyframes okonaTitleFloat {
-
-    0%,
-    100% {
-        transform:
-            translateZ(35px)
-            translateY(0);
-    }
-
-    50% {
-        transform:
-            translateZ(45px)
-            translateY(-5px);
-    }
-}
-
-@keyframes okonaButtonsFloat {
-
-    0%,
-    100% {
-        transform:
-            translateZ(30px)
-            translateY(0);
-    }
-
-    50% {
-        transform:
-            translateZ(38px)
-            translateY(-3px);
-    }
-}
-
-/* ========================================================= */
-/* 15. SOFT FLOATING CARDS                                  */
-/* ========================================================= */
-
-.category-card:nth-child(odd),
-.featured-card:nth-child(odd) {
-    animation:
-        okonaCardFloat 6s ease-in-out infinite;
-}
-
-.category-card:nth-child(even),
-.featured-card:nth-child(even) {
-    animation:
-        okonaCardFloat 7s ease-in-out infinite reverse;
-}
-
-@keyframes okonaCardFloat {
-
-    0%,
-    100% {
-        margin-top: 0;
-    }
-
-    50% {
-        margin-top: -4px;
-    }
-}
-
-/* ========================================================= */
-/* 16. IMAGE DEPTH                                         */
-/* ========================================================= */
-
-.category-card img,
-.featured-card img,
-.gallery img {
-    backface-visibility: hidden;
-}
-
-/* ========================================================= */
-/* 17. SCROLLING SECTION SHADOW                             */
-/* ========================================================= */
-
-#services,
-#categories,
-#featured,
-#why-us,
-#about,
-#products,
-#testimonials,
-#contact {
-
-    box-shadow:
-        inset 0 20px 40px rgba(0,0,0,0.015),
-        inset 0 -20px 40px rgba(0,0,0,0.015);
-}
-
-/* ========================================================= */
-/* 18. MOBILE FLOATING EFFECT                              */
-/* ========================================================= */
-
-@media (max-width: 600px) {
-
-    .category-card:nth-child(odd),
-    .featured-card:nth-child(odd) {
-
-        animation:
-            okonaMobileFloat 7s ease-in-out infinite;
-    }
-
-    .category-card:nth-child(even),
-    .featured-card:nth-child(even) {
-
-        animation:
-            okonaMobileFloat 8s ease-in-out infinite reverse;
-    }
-
-    @keyframes okonaMobileFloat {
-
-        0%,
-        100% {
-            transform: translateY(0);
-        }
-
-        50% {
-            transform: translateY(-3px);
-        }
-    }
-}
-
-/* ========================================================= */
-/* 19. KEEP MOBILE CLEAN                                   */
-/* ========================================================= */
-
-@media (max-width: 600px) {
-
-    section h2 {
-        line-height: 1.2;
-    }
-
-    .category-card,
-    .featured-card,
-    .service-card,
-    .why-box,
-    .testimonial-card {
-
-        max-width: 100%;
-    }
-
-    .gallery {
-        gap: 12px;
-    }
-}
-
-/* ========================================================= */
-/* 20. REDUCED MOTION                                      */
-/* ========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-    }
-}
-/* ========================================================= */
-/* OKONA VISIBILITY FIX                                    */
-/* ========================================================= */
-
-/* Make sure all website sections remain visible */
-.reveal-on-scroll {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: none !important;
-}
-
-/* ================================
-   OKONA HERO VIDEO - FULL SCREEN
-================================ */
-
-.video-hero {
-    position: relative;
-    min-height: 600px;
-    overflow: hidden;
-    isolation: isolate;
-    background: #111;
-}
-
-.video-hero .hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 0;
-    pointer-events: none;
-}
-
-.video-hero .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.42);
-    z-index: 1;
-    pointer-events: none;
-}
-
-.video-hero .hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.reveal-on-scroll {
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
-/* FINAL OKONA VIDEO FIX */
-
-.video-hero {
-    position: relative !important;
-    width: 100% !important;
-    min-height: 600px !important;
-    overflow: hidden !important;
-}
-
-.video-hero .hero-video {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    min-width: 100% !important;
-    min-height: 100% !important;
-    max-width: none !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-    transform: none !important;
-    z-index: 0 !important;
-}
-
-.video-hero .hero-overlay {
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 1 !important;
-}
-
-.video-hero .hero-content {
-    position: relative !important;
-    z-index: 2 !important;
-}
-
-/* ========================================
-   OKONA MOBILE HERO - FINAL
-======================================== */
-
-@media (max-width: 768px) {
-
-    .video-hero {
-        min-height: 620px !important;
-        width: 100% !important;
-        overflow: hidden !important;
-    }
-
-    .video-hero .hero-video {
-        width: 100% !important;
-        height: 100% !important;
-        min-width: 100% !important;
-        min-height: 100% !important;
-        object-fit: cover !important;
-        object-position: center center !important;
-    }
-
-    .video-hero .hero-content {
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-        padding: 50px 20px !important;
-    }
-
-    .video-hero .hero-small {
-        font-size: 12px !important;
-        letter-spacing: 2px !important;
-    }
-
-    .video-hero h2 {
-        font-size: clamp(32px, 9vw, 48px) !important;
-        line-height: 1.1 !important;
-        margin: 12px 0 !important;
-    }
-
-    .video-hero .hero-text {
-        font-size: 15px !important;
-        line-height: 1.6 !important;
-        max-width: 350px !important;
-        margin: 0 auto 22px !important;
-    }
-
-    .video-hero .hero-buttons {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 12px !important;
-    }
-
-    .video-hero .hero-buttons a {
-        width: min(280px, 90%) !important;
-        box-sizing: border-box !important;
-        text-align: center !important;
-    }
-
-    .video-hero .trust-text {
-        font-size: 12px !important;
-        line-height: 1.5 !important;
-        margin-top: 20px !important;
     }
 }
