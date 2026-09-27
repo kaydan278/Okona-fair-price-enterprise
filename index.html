@@ -542,112 +542,150 @@
 </div>
 
 <script>
+document.addEventListener("DOMContentLoaded", function () {
 
-const productImages = document.querySelectorAll(".gallery img");
+    const productImages = document.querySelectorAll(".gallery img");
 
-const imageViewer = document.getElementById("imageViewer");
-const viewerImage = document.getElementById("viewerImage");
-const closeViewer = document.getElementById("closeViewer");
-const prevImage = document.getElementById("prevImage");
-const nextImage = document.getElementById("nextImage");
-const imageCounter = document.getElementById("imageCounter");
+    const imageViewer = document.getElementById("imageViewer");
+    const viewerImage = document.getElementById("viewerImage");
+    const closeViewer = document.getElementById("closeViewer");
+    const prevImage = document.getElementById("prevImage");
+    const nextImage = document.getElementById("nextImage");
+    const imageCounter = document.getElementById("imageCounter");
 
-let currentImages = [];
-let currentIndex = 0;
+    let currentImages = [];
+    let currentIndex = 0;
 
-productImages.forEach(function(image) {
+    productImages.forEach(function (image) {
 
-    image.addEventListener("click", function() {
+        image.style.cursor = "pointer";
 
-        const gallery = image.closest(".gallery");
+        image.addEventListener("click", function () {
 
-        currentImages = Array.from(gallery.querySelectorAll("img"));
+            const gallery = image.closest(".gallery");
 
-        currentIndex = currentImages.indexOf(image);
+            if (!gallery) {
+                return;
+            }
+
+            currentImages = Array.from(
+                gallery.querySelectorAll("img")
+            );
+
+            currentIndex = currentImages.indexOf(image);
+
+            if (currentIndex === -1) {
+                currentIndex = 0;
+            }
+
+            showImage();
+
+            imageViewer.classList.add("active");
+
+            document.body.style.overflow = "hidden";
+        });
+    });
+
+
+    function showImage() {
+
+        if (currentImages.length === 0) {
+            return;
+        }
+
+        const selectedImage = currentImages[currentIndex];
+
+        const imageSource = selectedImage.getAttribute("src");
+
+        viewerImage.src = imageSource;
+
+        viewerImage.alt =
+            selectedImage.getAttribute("alt") || "Okona Product";
+
+        imageCounter.textContent =
+            (currentIndex + 1) + " / " + currentImages.length;
+    }
+
+
+    nextImage.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+        if (currentImages.length === 0) {
+            return;
+        }
+
+        currentIndex++;
+
+        if (currentIndex >= currentImages.length) {
+            currentIndex = 0;
+        }
 
         showImage();
+    });
 
-        imageViewer.classList.add("active");
 
-        document.body.style.overflow = "hidden";
+    prevImage.addEventListener("click", function (event) {
 
+        event.stopPropagation();
+
+        if (currentImages.length === 0) {
+            return;
+        }
+
+        currentIndex--;
+
+        if (currentIndex < 0) {
+            currentIndex = currentImages.length - 1;
+        }
+
+        showImage();
+    });
+
+
+    closeViewer.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+        imageViewer.classList.remove("active");
+
+        document.body.style.overflow = "";
+    });
+
+
+    imageViewer.addEventListener("click", function (event) {
+
+        if (event.target === imageViewer) {
+
+            imageViewer.classList.remove("active");
+
+            document.body.style.overflow = "";
+        }
+    });
+
+
+    document.addEventListener("keydown", function (event) {
+
+        if (!imageViewer.classList.contains("active")) {
+            return;
+        }
+
+        if (event.key === "Escape") {
+            imageViewer.classList.remove("active");
+            document.body.style.overflow = "";
+        }
+
+        if (event.key === "ArrowRight") {
+            nextImage.click();
+        }
+
+        if (event.key === "ArrowLeft") {
+            prevImage.click();
+        }
     });
 
 });
-
-function showImage() {
-
-    viewerImage.src = currentImages[currentIndex].src;
-
-    viewerImage.alt = currentImages[currentIndex].alt;
-
-    imageCounter.textContent =
-        (currentIndex + 1) + " / " + currentImages.length;
-}
-
-function closeImageViewer() {
-
-    imageViewer.classList.remove("active");
-
-    document.body.style.overflow = "";
-
-}
-
-function nextProductImage() {
-
-    currentIndex++;
-
-    if (currentIndex >= currentImages.length) {
-        currentIndex = 0;
-    }
-
-    showImage();
-}
-
-function previousProductImage() {
-
-    currentIndex--;
-
-    if (currentIndex < 0) {
-        currentIndex = currentImages.length - 1;
-    }
-
-    showImage();
-}
-
-nextImage.addEventListener("click", nextProductImage);
-
-prevImage.addEventListener("click", previousProductImage);
-
-closeViewer.addEventListener("click", closeImageViewer);
-
-imageViewer.addEventListener("click", function(event) {
-
-    if (event.target === imageViewer) {
-        closeImageViewer();
-    }
-
-});
-
-document.addEventListener("keydown", function(event) {
-
-    if (!imageViewer.classList.contains("active")) {
-        return;
-    }
-
-    if (event.key === "Escape") {
-        closeImageViewer();
-    }
-
-    if (event.key === "ArrowRight") {
-        nextProductImage();
-    }
-
-    if (event.key === "ArrowLeft") {
-        previousProductImage();
-    }
-
-});
+</script>
 
 </script>
 	<!-- ================================================= -->
