@@ -1783,5 +1783,43 @@ a[href*="wa.me"]:active {
 }
 
 /* =========================================================
+   OKONA ABOUT VIDEO
+   ========================================================= */
+
+.about-video {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto 0;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.18),
+        0 3px 10px rgba(0, 0, 0, 0.08);
+    background: #000;
+}
+
+.about-video video {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .about-video {
+        margin: 30px auto 0;
+        border-radius: 12px;
+    }
+
+    .about-video video {
+        border-radius: 12px;
+        max-height: 420px;
+    }
+}
+/* =========================================================
    END OF OKONA STYLE.CSS
    ========================================================= */
