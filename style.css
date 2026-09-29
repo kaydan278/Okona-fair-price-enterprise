@@ -2103,6 +2103,46 @@ a[href*="wa.me"]:active {
     }
 
 }
+
+/* =========================================================
+   PREMIUM PRODUCT CARD EFFECT
+   ========================================================= */
+
+.product-category {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.product-category:hover {
+    transform: translateY(-5px);
+}
+
+.product-category .gallery img {
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        filter 0.45s ease;
+}
+
+.product-category .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.22);
+    filter: brightness(1.04);
+}
+
+/* Keep the effect comfortable on phones */
+
+@media (max-width: 600px) {
+
+    .product-category:hover {
+        transform: none;
+    }
+
+    .product-category .gallery img:hover {
+        transform: scale(1.02);
+    }
+
+}
 /* =========================================================
    END OF OKONA STYLE.CSS
    ========================================================= */
