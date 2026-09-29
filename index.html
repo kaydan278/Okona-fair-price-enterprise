@@ -951,25 +951,49 @@
                 WhatsApp Us
             </a>
 
-           <div class="social-links">
+          /* ================= SOCIAL ICON BOXES ================= */
 
-    <a href="https://www.tiktok.com/@okonafairprice?_r=1&_t=ZS-9A7h4L4s52K"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="TikTok"
-       class="tiktok-link">
-        <span class="social-icon">♪</span>
-        TikTok
-    </a>
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+}
 
-    <a href="https://www.facebook.com/share/1GyHdue9Bo/"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Facebook"
-       class="facebook-link">
-        <span class="social-icon">f</span>
-        Facebook
-    </a>
+.social-icon-box {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon-box svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
+/* TikTok */
+.tiktok-box {
+    background: #000;
+    color: #fff;
+}
+
+/* Facebook */
+.facebook-box {
+    background: #1877f2;
+    color: #fff;
+}
+
+/* Hover effect */
+.social-icon-box:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
 
 </div>
 
