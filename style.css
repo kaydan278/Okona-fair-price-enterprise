@@ -2025,6 +2025,44 @@ a[href*="wa.me"]:active {
     }
 
 }
+
+/* =========================================================
+   PREMIUM CTA VIDEO EFFECT
+   ========================================================= */
+
+.cta-background-video {
+    animation: ctaVideoZoom 18s ease-in-out infinite;
+}
+
+.cta-content {
+    animation: ctaContentIn 1s ease-out;
+}
+
+@keyframes ctaVideoZoom {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.08);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes ctaContentIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* =========================================================
    END OF OKONA STYLE.CSS
    ========================================================= */
