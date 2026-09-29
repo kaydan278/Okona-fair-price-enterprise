@@ -2143,6 +2143,32 @@ a[href*="wa.me"]:active {
     }
 
 }
+
+/* ================= SOCIAL LINKS ================= */
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    display: inline-block;
+    padding: 9px 15px;
+    background: #d4af37;
+    color: #111;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #b8962e;
+    color: #fff;
+    transform: translateY(-2px);
+}
 /* =========================================================
    END OF OKONA STYLE.CSS
    ========================================================= */
