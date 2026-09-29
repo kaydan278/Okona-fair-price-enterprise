@@ -2241,6 +2241,19 @@ a[href*="wa.me"]:active {
     color: #fff;
     transform: translateY(-2px);
 }
+
+/* ================= FLOATING WHATSAPP ICON ================= */
+
+.floating-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-whatsapp i {
+    font-size: 27px;
+    line-height: 1;
+}
 /* =========================================================
    END OF OKONA STYLE.CSS
    ========================================================= */
