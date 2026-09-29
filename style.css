@@ -1931,6 +1931,100 @@ a[href*="wa.me"]:active {
         transform: translateZ(15px);
     }
 }
+
+/* =========================================================
+   OKONA CTA VIDEO BACKGROUND
+   ========================================================= */
+
+.video-cta {
+    position: relative;
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    isolation: isolate;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cta-background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -3;
+    pointer-events: none;
+}
+
+.cta-video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.52);
+    z-index: -2;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    color: white;
+    padding: 30px 20px;
+}
+
+.cta-content h2 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 20px;
+    text-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.65),
+        0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.cta-content p {
+    color: white;
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 0 auto 28px;
+    max-width: 700px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.65);
+}
+
+.cta-content .cta-button {
+    display: inline-block;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .video-cta {
+        min-height: 430px;
+        padding: 60px 18px;
+    }
+
+    .cta-video-overlay {
+        background: rgba(0, 0, 0, 0.56);
+    }
+
+    .cta-content {
+        padding: 20px 10px;
+    }
+
+    .cta-content h2 {
+        font-size: 30px;
+        line-height: 1.25;
+    }
+
+    .cta-content p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+}
 /* =========================================================
    END OF OKONA STYLE.CSS
    ========================================================= */
