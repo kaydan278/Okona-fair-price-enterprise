@@ -2065,41 +2065,43 @@ a[href*="wa.me"]:active {
 }
 
 /* =========================================================
-   PREMIUM CTA VIDEO EFFECT
+   PREMIUM PRODUCT CARD EFFECT
    ========================================================= */
 
-.cta-background-video {
-    animation: ctaVideoZoom 18s ease-in-out infinite;
+.product-category {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.cta-content {
-    animation: ctaContentIn 1s ease-out;
+.product-category:hover {
+    transform: translateY(-5px);
 }
 
-@keyframes ctaVideoZoom {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
-    }
-
-    50% {
-        transform: translate(-50%, -50%) scale(1.08);
-    }
-
-    100% {
-        transform: translate(-50%, -50%) scale(1);
-    }
+.product-category .gallery img {
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        filter 0.45s ease;
 }
 
-@keyframes ctaContentIn {
-    from {
-        opacity: 0;
-        transform: translateY(25px);
+.product-category .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.22);
+    filter: brightness(1.04);
+}
+
+/* Keep the effect comfortable on phones */
+
+@media (max-width: 600px) {
+
+    .product-category:hover {
+        transform: none;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    .product-category .gallery img:hover {
+        transform: scale(1.02);
     }
+
 }
 /* =========================================================
    END OF OKONA STYLE.CSS
