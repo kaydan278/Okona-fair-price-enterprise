@@ -2170,48 +2170,30 @@ a[href*="wa.me"]:active {
     line-height: 1;
 }
 
-/* ================= SOCIAL ICON BOXES ================= */
+/* ================= SOCIAL MEDIA BUTTONS ================= */
 
 .social-links {
     display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 18px;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
 }
 
-.social-icon-box {
-    width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
+.social-button {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #d4af37;
+    color: #111;
     text-decoration: none;
-    transition: all 0.3s ease;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
 
-.social-icon-box svg {
-    width: 22px;
-    height: 22px;
-    fill: currentColor;
-}
-
-/* TikTok */
-.tiktok-box {
-    background: #000;
+.social-button:hover {
+    background: #b8962e;
     color: #fff;
-}
-
-/* Facebook */
-.facebook-box {
-    background: #1877f2;
-    color: #fff;
-}
-
-/* Hover effect */
-.social-icon-box:hover {
-    transform: translateY(-3px);
-    opacity: 0.9;
+    transform: translateY(-2px);
 }
 /* =========================================================
    END OF OKONA STYLE.CSS
