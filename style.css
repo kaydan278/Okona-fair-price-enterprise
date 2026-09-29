@@ -2149,24 +2149,46 @@ a[href*="wa.me"]:active {
 .social-links {
     display: flex;
     gap: 12px;
-    margin-top: 15px;
+    margin-top: 18px;
     flex-wrap: wrap;
 }
 
 .social-links a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     padding: 9px 15px;
-    background: #d4af37;
-    color: #111;
     text-decoration: none;
     border-radius: 6px;
     font-weight: 600;
     transition: 0.3s ease;
 }
 
-.social-links a:hover {
-    background: #b8962e;
+.social-icon {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* TikTok */
+.tiktok-link {
+    background: #000;
     color: #fff;
+}
+
+.tiktok-link:hover {
+    background: #222;
+    transform: translateY(-2px);
+}
+
+/* Facebook */
+.facebook-link {
+    background: #1877f2;
+    color: #fff;
+}
+
+.facebook-link:hover {
+    background: #0d65d9;
     transform: translateY(-2px);
 }
 /* =========================================================
